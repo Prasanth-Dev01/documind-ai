@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+frontend/node_modules/
+frontend/.next/
+frontend/out/
+
+# Python virtual environments and caches
+.venv/
+venv/
+backend/.venv/
+backend/venv/
+__pycache__/
+**/__pycache__/
+*.py[cod]
+
+# Local vector database and uploaded/private documents
+backend/chroma_db/
+backend/data/
+*.pdf
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+frontend/.env.local
+backend/.env.local
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
