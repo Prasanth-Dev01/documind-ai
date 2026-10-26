@@ -21,7 +21,7 @@ def chat_with_documents(raw_question: str) -> dict:
         raise HTTPException(status_code=404, detail="No documents uploaded yet.")
 
     query_embedding = create_embedding(question)
-    results = collection.query(query_embeddings=[query_embedding], n_results=min(4, count), include=["doicuments", "metadatas", "distances"])
+    results = collection.query(query_embeddings=[query_embedding], n_results=min(4, count), include=["documents", "metadatas", "distances"])
     documents = results.get("documents", [[]])[0]
     metadatas = results.get("metadatas", [[]])[0]
     distances = results.get("distances", [[]])[0]
