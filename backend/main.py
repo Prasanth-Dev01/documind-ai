@@ -1,8 +1,11 @@
+# .\.venv\Scripts\Activate.ps1
+# python -m uvicorn main:app --reload --port 8000
+
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 import ollama
-
+import traceback
 from services.document_service import delete_document as remove_document, get_documents as list_documents, process_upload
 from services.embedding_service import CHAT_MODEL, EMBED_MODEL
 from services.rag_service import chat_with_documents, collection
