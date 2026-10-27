@@ -1,0 +1,3 @@
+import { Sparkles } from "lucide-react";
+
+export function AppHeader() { return <header className="flex h-20 items-center justify-between border-b border-white/10"><div className="flex items-center gap-3"><div className="flex size-10 items-center justify-center rounded-xl bg-violet-500"><Sparkles className="size-5 text-white" /></div><div><h1 className="text-lg font-semibold tracking-tight">DocuMind <span className="text-violet-400">AI</span></h1><p className="text-xs text-slate-500">Local RAG · Private document chat</p></div></div><div className="flex items-center gap-2 rounded-full border border-emerald-500/20 bg-emerald-500/10 px-3 py-2 text-xs text-emerald-300"><span className="size-2 rounded-full bg-emerald-400" />Local AI</div></header>; }
